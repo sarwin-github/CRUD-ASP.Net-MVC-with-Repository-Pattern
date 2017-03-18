@@ -12,6 +12,7 @@ namespace EmployeeTest.Domain.Abstract
         IEnumerable<Employee> Employees { get; }
         void SaveEmployee(Employee employee);
         Employee DeleteEmployee(int id);
+        Employee SearchEmployeeID(int? id);
 
     }
 }

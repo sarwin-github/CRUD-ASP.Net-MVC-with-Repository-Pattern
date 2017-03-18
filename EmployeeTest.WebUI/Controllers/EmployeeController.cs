@@ -54,22 +54,22 @@ namespace EmployeeTest.WebUI.Controllers
         [HttpGet]
         public ViewResult Details(int? id)
         {
-            Employee employee = repository.Employees.FirstOrDefault(x => x.EmployeeID == id);
-            return View(employee);
+            var employeeDetails = repository.SearchEmployeeID(id);
+            return View(employeeDetails);
         }
 
         [HttpGet]
         public ViewResult Edit(int? id)
         {
-            Employee employee = repository.Employees.FirstOrDefault(x => x.EmployeeID == id);
-            return View(employee);
+            var employeeDetails = repository.SearchEmployeeID(id);
+            return View(employeeDetails);
         }
 
         [HttpGet]
         public ViewResult Delete(int? id)
         {
-            Employee employee = repository.Employees.FirstOrDefault(x => x.EmployeeID == id);
-            return View(employee);
+            var employeeDetails = repository.SearchEmployeeID(id);
+            return View(employeeDetails);
         }
 
         [HttpPost, ActionName("Delete")]

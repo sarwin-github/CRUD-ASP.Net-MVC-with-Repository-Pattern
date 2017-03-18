@@ -53,5 +53,11 @@ namespace EmployeeTest.Domain.Concrete
         {
             dbcontext.Dispose();
         }
+
+        public Employee SearchEmployeeID(int? id)
+        {
+            Employee employee = dbcontext.Employees.Find(id);
+            return employee;
+        }
     }
 }
